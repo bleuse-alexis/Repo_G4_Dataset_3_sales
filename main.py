@@ -1,11 +1,13 @@
 # Importation des bibliothèques
 import pandas as pd
+from pandas.api.types import is_string_dtype
 
 from fonction.fonction_sales import recup_df
 from fonction.fonction_sales import supression_colonne
 from fonction.fonction_sales import modification_df
 from fonction.fonction_sales import suppression_ligne
 from fonction.fonction_sales import transfo_donnees
+
 from fonction.fonction_sales import precision
 
 
@@ -20,19 +22,19 @@ df=recup_df(fileLocation)
 
 #supression des colonnes superflu
 df=supression_colonne(df)
-#df.head()
+
 #modification des données
-#df=modification_df(df)
+df=modification_df(df)
 
 #suppression des lignes inutiles
-#df=suppression_ligne(df)
-
-#création d'un nouveau dataframe
-#df2 = df
+df=suppression_ligne(df)
 
 #transformation des variables str en valeurs numériques
-#df2=transfo_donnees(df2)
+df=transfo_donnees(df)
+print(df.info())
 
 #calcul dela precision
-#moyenne=precision(df2)
-#print(moyenne)
+moyenne=precision(df)
+print(moyenne)
+
+df.to_csv('data1.csv',sep=";",header=True, index=False)
