@@ -3,6 +3,8 @@ import numpy as np
 from sklearn.model_selection import cross_val_score
 from sklearn.ensemble import GradientBoostingRegressor
 import logging
+from sklearn.model_selection import GridSearchCV
+
 
 
 
@@ -36,12 +38,19 @@ def precision(dfSales,var):
     '''
 
     # tentative de prédiction en régression
-    randomforest = GradientBoostingRegressor(n_estimators=100, min_samples_leaf=15)
     y = dfSales[var]
     x = dfSales.loc[:, dfSales.columns != var]
-    randomforest.fit(x, y)
-    score = cross_val_score(randomforest, x, y, cv=15)
+
+    param_grid = {
+        'min_samples_leaf': [3, 4, 5],
+        'min_samples_split': [8, 10, 12],
+        'n_estimators': [100, 200, 300]
+    }
+    GBR = GradientBoostingRegressor()
+    grid_search = GridSearchCV(estimator=GBR, param_grid=param_grid,cv = 15, n_jobs = -1, verbose = 2)
+    grid_search.fit(x, y)
+    score = cross_val_score(grid_search, x, y)
     moyenne = score.mean()
-    y_predit = randomforest.predict(x)
+    y_predit = grid_search.predict(x)
     logging.info('fin de la fonction precision')
     return moyenne,y_predit

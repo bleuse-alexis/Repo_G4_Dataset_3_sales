@@ -13,7 +13,6 @@ pd.set_option('mode.chained_assignment', None)
 logging.basicConfig(filename='log.txt', level=logging.DEBUG,format='%(asctime)s %(message)s')
 
 #emplacement fichier
-logging.info('début')
 fileLocation = 'Dataset_3_sales.csv'
 
 #colonnes a supprimer
@@ -64,6 +63,4 @@ df.to_csv('data1.csv',sep=";",header=True, index=False)
 
 logging.info('fin du programme')
 
-#tester les grid search
-#créer des logs avec logger
 #généraliser le script avec des variable user

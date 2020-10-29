@@ -33,14 +33,15 @@ def modification_donnee(dfSales,liste1,liste2,liste3,val1,val2,val3):
     dfSales= dfSales.astype(str)
     for c in dfSales.columns:
         for i in dfSales.index:
-            for p in range (0,5):
+            for p in range(len(liste1)):
                 if dfSales[c][i]==liste1[p]:
                   dfSales[c][i]=val3
-            for i in range (0,2):
+            for i in range(len(liste3)):
                 if dfSales[c][i]==liste2[i]:
                   dfSales[c][i]=val1
-            if dfSales[c][i]==liste3:
-                dfSales[c][i] = val2
+            for t in range(len(liste3)):
+                if dfSales[c][i]==liste3[t]:
+                  dfSales[c][i] = val2
     logging.info('fin de fonction modification donnee')
     return dfSales
 
