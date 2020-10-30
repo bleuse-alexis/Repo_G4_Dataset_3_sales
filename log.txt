@@ -177,3 +177,56 @@
 2020-10-30 12:35:08,468 fin de la fonction encoder donnee
 2020-10-30 12:35:08,468 colonne str encodé
 2020-10-30 12:35:08,468 debut de la fonction precision
+2020-10-30 16:06:01,295 début
+2020-10-30 16:06:01,296 début fonction recup
+2020-10-30 16:06:01,377 fin de fonction récup
+2020-10-30 16:06:01,377 dataframe récupéré
+2020-10-30 16:06:01,377 debut de fonction supression colonne
+2020-10-30 16:06:01,387 fin de fonction supression colonne
+2020-10-30 16:06:01,392 colonnes superflus suprimés
+2020-10-30 16:06:01,392 debut de fonction modification donnee
+2020-10-30 16:06:07,165 fin de fonction modification donnee
+2020-10-30 16:06:07,166 données modifié dans le dataframe
+2020-10-30 16:06:07,166 debut de fonction suppression ligne
+2020-10-30 16:06:08,474 fin de fonction suppression ligne
+2020-10-30 16:06:08,475 ligne suprimé
+2020-10-30 16:06:08,475 debut de la fonction encoder donnee
+2020-10-30 16:06:08,487 fin de la fonction encoder donnee
+2020-10-30 16:06:08,488 colonne str encodé
+2020-10-30 16:06:08,488 debut de la fonction precision
+2020-10-30 16:14:36,721 fin de la fonction precision
+2020-10-30 16:14:36,775 fin du programme
+2020-10-30 16:21:21,497 début
+2020-10-30 16:21:21,497 début fonction recup
+2020-10-30 16:21:21,581 fin de fonction récup
+2020-10-30 16:21:21,581 dataframe récupéré
+2020-10-30 16:21:21,581 debut de fonction supression colonne
+2020-10-30 16:21:21,589 fin de fonction supression colonne
+2020-10-30 16:21:21,593 colonnes superflus suprimés
+2020-10-30 16:21:21,593 debut de fonction modification donnee
+2020-10-30 16:21:29,472 fin de fonction modification donnee
+2020-10-30 16:21:29,472 données modifié dans le dataframe
+2020-10-30 16:21:29,472 debut de fonction suppression ligne
+2020-10-30 16:21:30,538 fin de fonction suppression ligne
+2020-10-30 16:21:30,539 ligne suprimé
+2020-10-30 16:21:30,539 debut de la fonction encoder donnee
+2020-10-30 16:21:30,920 fin de la fonction encoder donnee
+2020-10-30 16:21:30,925 colonne str encodé
+2020-10-30 16:21:38,033 fin du programme
+2020-10-30 16:26:41,254 début
+2020-10-30 16:26:41,254 début fonction recup
+2020-10-30 16:26:41,342 fin de fonction récup
+2020-10-30 16:26:41,343 dataframe récupéré
+2020-10-30 16:26:41,343 debut de fonction supression colonne
+2020-10-30 16:26:41,355 fin de fonction supression colonne
+2020-10-30 16:26:41,359 colonnes superflus suprimés
+2020-10-30 16:26:41,359 debut de fonction modification donnee
+2020-10-30 16:26:46,915 fin de fonction modification donnee
+2020-10-30 16:26:46,915 données modifié dans le dataframe
+2020-10-30 16:26:46,915 debut de fonction suppression ligne
+2020-10-30 16:26:48,137 fin de fonction suppression ligne
+2020-10-30 16:26:48,137 ligne suprimé
+2020-10-30 16:26:48,137 debut de la fonction encoder donnee
+2020-10-30 16:26:48,149 fin de la fonction encoder donnee
+2020-10-30 16:26:48,149 colonne str encodé
+2020-10-30 16:26:48,207 fin du programme

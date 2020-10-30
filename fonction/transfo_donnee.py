@@ -17,31 +17,20 @@ def suppression_colonne(dfSales,liste):
     logging.info('fin de fonction supression colonne')
     return dfSales
 
-def modification_donnee(dfSales,liste1,liste2,liste3,val1,val2,val3):
+def modification_donnee(dfSales,dico):
     logging.info('debut de fonction modification donnee')
     '''
-
     :param dfSales: dataframe sur lequel appliquer la fonction
-    :param liste1: liste des différents nom d'une des données
-    :param liste2: liste des différents nom d'une des données
-    :param liste3: liste des différents nom d'une des données
-    :param val1: valeur remplaçante
-    :param val2: valeur remplaçante
-    :param val3: valeur remplaçante
+    :param dico: dico des variables a remplacer ainsi que les valeurs a appliquer
     :return: return le dataframe une fois les modifications effectués
     '''
     dfSales= dfSales.astype(str)
     for c in dfSales.columns:
         for i in dfSales.index:
-            for p in range(len(liste1)):
-                if dfSales[c][i]==liste1[p]:
-                  dfSales[c][i]=val3
-            for i in range(len(liste3)):
-                if dfSales[c][i]==liste2[i]:
-                  dfSales[c][i]=val1
-            for t in range(len(liste3)):
-                if dfSales[c][i]==liste3[t]:
-                  dfSales[c][i] = val2
+            for key,value in dico.items():
+                if dfSales[c][i]==key:
+                  dfSales[c][i]=value
+
     logging.info('fin de fonction modification donnee')
     return dfSales
 

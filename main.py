@@ -23,13 +23,9 @@ liste_ID=['index','Item_Identifier','Outlet_Identifier','Unnamed: 0',
 
 #valeurs a remplacer
 
-liste_erreur=['-400','Allez au boulot ! :)','nan','ù*ùfsfsf///','']
-LF='Low Fat'
-reg='Regular'
 val='0'
-liste_remplacer1=['low fat','LF']
-liste_remplacer2=['reg']
-
+dico_remplacer={'low fat':'Low Fat','LF':'Low Fat','reg':'Regular','-400':'0','Allez au boulot ! :)':'0',
+                'nan':'0','ù*ùfsfsf///':'0','':'0'}
 logging.info('début')
 val_pre='Item_Outlet_Sales'
 
@@ -43,7 +39,7 @@ df=suppression_colonne(df,liste_ID)
 logging.info('colonnes superflus suprimés')
 
 #modification des données
-df=modification_donnee(df,liste_erreur,liste_remplacer1,liste_remplacer2,LF,reg,val)
+df=modification_donnee(df,dico_remplacer)
 logging.info('données modifié dans le dataframe')
 
 #suppression des lignes inutiles
@@ -56,8 +52,8 @@ logging.info('colonne str encodé')
 
 
 #calcul dela precision
-result=precision(df,val_pre)
-print(result[0])
+#result=precision(df,val_pre)
+#print(result[0])
 
 df.to_csv('data1.csv',sep=";",header=True, index=False)
 
