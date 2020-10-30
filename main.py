@@ -16,11 +16,13 @@ logging.basicConfig(filename='log.txt', level=logging.DEBUG,format='%(asctime)s 
 fileLocation = 'Dataset_3_sales.csv'
 
 #colonnes a supprimer
+
 liste_ID=['index','Item_Identifier','Outlet_Identifier','Unnamed: 0',
-          'Unnamed: 0.1','Unnamed: 0.1.1','Unnamed: 0.1.1.1','Unnamed: 0.1.1.1.1',
-          'Unnamed: 0.1.1.1.1.1','Unnamed: 0.1.1.1.1.1.1','Unnamed: 0.1.1.1.1.1.1.1']
+       'Unnamed: 0.1','Unnamed: 0.1.1','Unnamed: 0.1.1.1','Unnamed: 0.1.1.1.1',
+        'Unnamed: 0.1.1.1.1.1','Unnamed: 0.1.1.1.1.1.1','Unnamed: 0.1.1.1.1.1.1.1']
 
 #valeurs a remplacer
+
 liste_erreur=['-400','Allez au boulot ! :)','nan','ù*ùfsfsf///','']
 LF='Low Fat'
 reg='Regular'
@@ -28,10 +30,8 @@ val='0'
 liste_remplacer1=['low fat','LF']
 liste_remplacer2=['reg']
 
-
 logging.info('début')
-print('entrer la variable a prédire')
-val_pre=input()
+val_pre='Item_Outlet_Sales'
 
 #récupération du dataframe
 
@@ -62,5 +62,3 @@ print(result[0])
 df.to_csv('data1.csv',sep=";",header=True, index=False)
 
 logging.info('fin du programme')
-
-#généraliser le script avec des variable user
