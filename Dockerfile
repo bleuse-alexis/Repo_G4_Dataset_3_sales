@@ -9,4 +9,3 @@ RUN pip3 install py2neo
 RUN pip3 install numpy
 RUN pip3 install --upgrade py2neo
 CMD python3 main.py
-
