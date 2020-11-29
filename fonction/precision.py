@@ -5,9 +5,6 @@ from sklearn.ensemble import GradientBoostingRegressor
 import logging
 from sklearn.model_selection import GridSearchCV
 
-
-
-
 def encoder_donnee(dfSales):
     logging.info('debut de la fonction encoder donnee')
 
