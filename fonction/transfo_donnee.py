@@ -46,7 +46,7 @@ def suppression_ligne(dfSales,val1,val2):
     '''
 
     dfSales.loc[dfSales[val1]==val2,val1]=np.nan
-    dfSales = dfSales.dropna(axis=0)
+    dfSales = dfSales.dropna(axis=0).reset_index(drop=True)
     for c in dfSales.columns:
         if pd.to_numeric(dfSales[c],errors='ignore').any() == True:
             dfSales[c]=dfSales[c].astype(float)
@@ -58,6 +58,6 @@ def suppression_ligne(dfSales,val1,val2):
             for i in dfSales.index:
                 if dfSales[c][i]==val2:
                     dfSales[c][i]=np.nan
-    dfSales = dfSales.dropna(axis=0)
+    dfSales = dfSales.dropna(axis=0).reset_index(drop=True)
     logging.info('fin de fonction suppression ligne')
     return dfSales
